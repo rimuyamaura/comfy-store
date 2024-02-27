@@ -2,11 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 import { toast } from 'react-toastify';
 
 const themes = {
-  winter: 'winter',
-  dracula: 'dracula',
+  cupcake: 'cupcake',
+  dim: 'dim',
 };
 const getThemeFromLocalStorage = () => {
-  const theme = localStorage.getItem('theme') || themes.winter;
+  const theme = localStorage.getItem('theme') || themes.cupcake;
   document.documentElement.setAttribute('data-theme', theme);
   return theme;
 };
@@ -35,8 +35,8 @@ const userSlice = createSlice({
       toast.success('Logged out successfully');
     },
     toggleTheme: (state, action) => {
-      const { dracula, winter } = themes;
-      state.theme = state.theme === dracula ? winter : dracula;
+      const { dim, cupcake } = themes;
+      state.theme = state.theme === dim ? cupcake : dim;
       document.documentElement.setAttribute('data-theme', state.theme);
       localStorage.setItem('theme', state.theme);
     },
