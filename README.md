@@ -1,6 +1,6 @@
 ## Comfy Store
 
-A mock website with online shopping functionalities for furniture and beds. Using the Comfy Store PostmanAPI to fetch and store data.
+A mock website with online shopping functionalities for furniture and beds. Connecting to the provided Comfy Store custom api server to fetch and store data.
 
 - Browse, search, filter through products.
 - Register and login as user to products to cart and checkout.
