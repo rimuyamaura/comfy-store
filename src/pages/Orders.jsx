@@ -32,7 +32,12 @@ export const loader =
     if (!user) {
       toast.warn('You must be logged in to view orders');
       return redirect('/login');
+    } else if (user.username == 'demo user') {
+      toast.warn(
+        'Guest user names and addresses will be randomized for privacy.'
+      );
     }
+
     const params = Object.fromEntries([
       ...new URL(request.url).searchParams.entries(),
     ]);
